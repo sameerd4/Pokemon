@@ -42,22 +42,22 @@ public class Driver {
        // System.out.println(charmander + "\n");
        // System.out.println(squirtle);
         
-    //    Battle battle = new Battle(squirtle, charmander);
-    //    System.out.println(battle);
-    //    battle.attack("Water Gun");
-    //    battle.attack("Tackle");
-    //    battle.attack("Tackle");
-    //    battle.attack("Ice Beam");
-    //    battle.attack("Water Gun");
+        Battle battle = new Battle(squirtle, charmander);
+        System.out.println(battle);
+        battle.attack("Water Gun");
+        battle.attack("Tackle");
+        battle.attack("Tackle");
+        battle.attack("Ice Beam");
+        battle.attack("Water Gun");
         
-        Battle battle2 = new Battle(pikachu, squirtle);
-        System.out.println(battle2);
-        battle2.attack("Thundershock");
-        battle2.attack("Quick Attack");
-        battle2.attack("Quick Attack");
-        battle2.attack("Quick Attack");
+//        Battle battle2 = new Battle(pikachu, squirtle);
+//        System.out.println(battle2);
+//        battle2.attack("Thundershock");
 //        battle2.attack("Quick Attack");
-        battle2.attack("Thundershock");
-        battle2.attack("Thundershock");
+//        battle2.attack("Quick Attack");
+//        battle2.attack("Quick Attack");
+//        battle2.attack("Quick Attack");
+//        battle2.attack("Thundershock");
+//        battle2.attack("Thundershock");
     }
 }
