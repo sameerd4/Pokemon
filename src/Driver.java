@@ -56,7 +56,7 @@ public class Driver {
         battle2.attack("Quick Attack");
         battle2.attack("Quick Attack");
         battle2.attack("Quick Attack");
-        battle2.attack("Quick Attack");
+//        battle2.attack("Quick Attack");
         battle2.attack("Thundershock");
         battle2.attack("Thundershock");
     }
