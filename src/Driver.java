@@ -3,41 +3,39 @@ public class Driver {
 
     public static void main(String[] args) {
         Pokemon charmander;
-        Type fire = new Type("Fire");
-        Type normal = new Type("Normal");
+
         Move[] moves = new Move[4];
-        moves[0] = new Move("Scratch", normal, 40);
-        moves[1] = new Move("Growl", normal, 0);
-        moves[2] = new Move("Ember", fire, 40);
-        moves[3] = new Move("Strength", normal, 80);
+        moves[0] = new Move("Scratch", Type.NORMAL, 40);
+        moves[1] = new Move("Growl", Type.NORMAL, 0);
+        moves[2] = new Move("Ember", Type.FIRE, 40);
+        moves[3] = new Move("Strength", Type.NORMAL, 80);
 
         Stats charmanderStats = new Stats(50, 120, 59, 48, 64, 67, 81);
 
-        charmander = new Pokemon("Charmander", fire, moves, charmanderStats);
+        charmander = new Pokemon("Charmander", Type.FIRE, moves, charmanderStats);
 
         Pokemon squirtle;
-        Type water = new Type("Water");
         Move[] squirtleMoves = new Move[4];
-        squirtleMoves[0] = new Move("Tackle", normal, 40);
-        squirtleMoves[1] = new Move("Tail Whip", normal, 0);
-        squirtleMoves[2] = new Move("Water Gun", water, 60);
-        squirtleMoves[3] = new Move("Ice Beam", new Type("Ice"), 95);
+        squirtleMoves[0] = new Move("Tackle", Type.NORMAL, 40);
+        squirtleMoves[1] = new Move("Tail Whip", Type.NORMAL, 0);
+        squirtleMoves[2] = new Move("Water Gun", Type.WATER, 60);
+        squirtleMoves[3] = new Move("Ice Beam", Type.ICE, 95);
 
         Stats squirtleStats = new Stats(50, 123, 68, 71, 55, 72, 61);
 
-        squirtle = new Pokemon("Squirtle", water, squirtleMoves, squirtleStats);
+        squirtle = new Pokemon("Squirtle", Type.WATER, squirtleMoves, squirtleStats);
 
         Pokemon pikachu;
-        Type electric = new Type("Electric");
+        
         Move[] pikachuMoves = new Move[4];
-        pikachuMoves[0] = new Move("Quick Attack", normal, 40);
-        pikachuMoves[1] = new Move("Tail Whip", normal, 0);
-        pikachuMoves[2] = new Move("Thundershock", electric, 40);
-        pikachuMoves[3] = new Move("Iron Tail", new Type("Ice"), 95);
+        pikachuMoves[0] = new Move("Quick Attack", Type.NORMAL, 40);
+        pikachuMoves[1] = new Move("Tail Whip", Type.NORMAL, 0);
+        pikachuMoves[2] = new Move("Thundershock", Type.STEEL, 40);
+        pikachuMoves[3] = new Move("Iron Tail", Type.STEEL, 95);
 
         Stats pikachuStats = new Stats(50, 123, 68, 71, 55, 72, 61);
 
-        pikachu = new Pokemon("Pikachu", electric, pikachuMoves, pikachuStats);
+        pikachu = new Pokemon("Pikachu", Type.ELECTRIC, pikachuMoves, pikachuStats);
         
        // System.out.println(charmander + "\n");
        // System.out.println(squirtle);

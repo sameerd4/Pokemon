@@ -73,17 +73,17 @@ public class Battle {
         // accounts for same-type attack bonus
         double STAB = 1;
         Type userType = user.getType();
-        String userTypeString = user.getType().getType();
+        
 
         Type moveType = move.getType();
-        String moveTypeString = move.getType().getType();
-        if (userTypeString.equals(moveTypeString)) {
+        
+        if (userType == moveType) {
             STAB = 1.5;
         }
 
         // accounts for type effectiveness
         double typeEffective = 1;
-        // if ()
+          
 
         modifier = randomValue * STAB * typeEffective;
         damage = (int)(damage * modifier);
