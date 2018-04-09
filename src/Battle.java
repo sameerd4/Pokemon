@@ -22,24 +22,25 @@ public class Battle {
     }
 
 
-    public void attack(String move) {
-        // System.out.println(user.getName() + " HP: " + userHP
-        // + "\n" + opponent.getName() + " HP: " + opponentHP + "\n");
-
+    public void attack(Pokemon user, String move) {
+        int i = 0;
         if (userHP <= 0) {
             System.out.println(user.getName() + " fainted!");
         }
         else if (opponentHP <= 0) {
             System.out.println(opponent.getName() + " fainted!");
         }
+
         else {
-            for (int i = 0; i <= 3; i++) {
+            while (i <= 3) {
+                // checks if move is known
                 if (move.equals(user.getMoves()[i].getMove())) {
 
                     Move moveDone = user.getMoves()[i];
 
                     // subtracts appropriate amount of damage from opponent
-                    opponentHP = opponentHP - damageDone(user, opponent, moveDone);
+                    opponentHP = opponentHP - damageDone(user, opponent,
+                        moveDone);
 
                     // sets HP to 0 when done
                     if (opponentHP < 0) {
@@ -49,10 +50,13 @@ public class Battle {
                     // displays use of moves, changes in HP
                     System.out.println(user.getName() + " used " + move + "!");
                     System.out.println("\n" + user.getName() + " HP: " + userHP
-                        + "\n" + opponent.getName() + " HP: " + opponentHP + "\n");
+                        + "\n" + opponent.getName() + " HP: " + opponentHP
+                        + "\n");
 
                 }
+                i++;
             }
+
         }
 
     }
@@ -73,17 +77,15 @@ public class Battle {
         // accounts for same-type attack bonus
         double STAB = 1;
         Type userType = user.getType();
-        
 
         Type moveType = move.getType();
-        
+
         if (userType == moveType) {
             STAB = 1.5;
         }
 
         // accounts for type effectiveness
         double typeEffective = 1;
-          
 
         modifier = randomValue * STAB * typeEffective;
         damage = (int)(damage * modifier);
