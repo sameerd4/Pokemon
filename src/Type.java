@@ -25,6 +25,10 @@ public enum Type {
     // this.type = type;
     // }
 
+    private Type() {
+        
+    }
+    
     public String getType() {
         return type;
     }

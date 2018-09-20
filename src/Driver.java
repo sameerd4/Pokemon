@@ -58,6 +58,7 @@ public class Driver {
         System.out.println(battle2);
 
         battle2.attack(pikachu, "Thundershock");
+        battle2.attack(squirtle, "Water Gun");
         battle2.attack(pikachu, "Quick Attack");
         battle2.attack(pikachu, "Quick Attack");
         battle2.attack(pikachu, "Quick Attack");

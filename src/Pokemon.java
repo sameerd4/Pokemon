@@ -6,7 +6,7 @@ public class Pokemon {
     private Move[] moves;
     private Stats stats;
 
-
+    // constructor
     public Pokemon(String name, Type type, Move[] moves, Stats stats) {
         this.name = name;
         this.type = type;
